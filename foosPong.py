@@ -43,17 +43,7 @@ class Ellipse:
         pygame.draw.ellipse(self.screen, pygame.Color("white"), rect, width)
 
 class Paddle:
-    # Attributes:
-    # -- left
-    # -- top
-    # -- width
-    # -- height
-    # -- velocity
-    # -- color
-    # -- screen
-    # Methods:
-    # -- draw
-    # -- bound_check
+
     def __init__(self, left, top, width, height, velocity, color, screen):
         # dimensions
         self.left = left
@@ -81,15 +71,7 @@ class Paddle:
             self.top = 0
 
 class Ball:
-    # Attributes:
-    # -- radius
-    # -- center
-    # -- velocity
-    # -- color
-    # -- screen
-    # Methods:
-    # -- draw
-    # -- move**
+
     def __init__(self, dot_radius, dot_center, dot_velocity, dot_color, screen):
         self.radius = dot_radius
         self.center = dot_center
@@ -317,10 +299,6 @@ class Game:
         # pygame.display.flip()
 
     def collide(self):
-        # detects collision with pads and ball
-        # if self.ball.center[0] < self.left_pad.right and self.ball.velocity[0] > 0: collision = False               # these two lines set collision to false when ball is behind the pad.
-        # elif self.ball.center[0] > self.right_pad.left and self.ball.velocity[0] < 0: collision = False
-        # else: collision = True
         collision = True
         if collision == True:
             if self.left_pad.rect.collidepoint(self.ball.center) or self.left_pad_2.rect.collidepoint(self.ball.center):
@@ -377,7 +355,7 @@ class Game:
             self.handle_events()
             self.draw()
             self.display_score()
-            self.check_continue()   # if you want to end game automatically after a certain score is reached by either of the players
+            self.check_continue()   # for ending game automatically after a certain score is reached by either of the players
             if self.continue_game:
                 self.collide()
                 self.update()
