@@ -363,7 +363,7 @@ class Game:
 
     def check_continue(self):
         # checks for max points limit (11) and if game should continue
-        if self.left_pad_score > 18 or self.right_pad_score > 18:   # point limit set to 18
+        if self.left_pad_score >= 18 or self.right_pad_score >= 18:   # point limit set to 18
             self.continue_game = False
 
     def update(self):
