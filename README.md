@@ -4,7 +4,7 @@ Battle it out with your friend. Hitting their side of the wall gives 1 point, hi
 First person to reach 18 points wins. 
 
 Controls:  
-a,b = first left paddle  
+a,q = first left paddle  
 d,e = second left paddle  
 j,i = first right paddle  
 l,p = second right paddle  
